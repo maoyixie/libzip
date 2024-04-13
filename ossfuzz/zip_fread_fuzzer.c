@@ -6,8 +6,11 @@
 #include <time.h>
 #include <zip.h>
 
-extern int
-LLVMFuzzerTestOneInput(const uint8_t *Data, size_t Size) {
+#ifdef __cplusplus
+extern "C"
+#endif
+    int
+    LLVMFuzzerTestOneInput(const uint8_t *Data, size_t Size) {
     zip_t *archive;
     zip_error_t error;
     zip_source_t *source;

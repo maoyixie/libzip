@@ -6,8 +6,8 @@
 #ifdef __cplusplus
 extern "C"
 #endif
-int
-LLVMFuzzerTestOneInput(const uint8_t *data, size_t size) {
+    int
+    LLVMFuzzerTestOneInput(const uint8_t *data, size_t size) {
     zip_source_t *src;
     zip_error_t error;
     zip_t *za;
